@@ -22,13 +22,19 @@
   .en { direction:ltr; text-align:left; }
   .muted { opacity:.8; font-size:.95em; }
   code { background:var(--base); padding:2px 8px; border-radius:6px; }
+  .callout { background:var(--base); border-inline-start:4px solid var(--accent);
+             padding:14px 18px; border-radius:8px; margin:1.4em 0; }
+  table { width:100%; border-collapse:collapse; margin:1.2em 0; font-size:.95em; }
+  th, td { text-align:start; padding:10px 12px; border-bottom:1px solid var(--base);
+           vertical-align:top; }
+  th { color:var(--accent); font-weight:600; }
 </style>
 </head>
 <body>
 <header>
   <h1>سياسة الخصوصية — وصلة الكلمات</h1>
   <p>Privacy Policy — Wasla: Arabic Word Connect</p>
-  <p class="muted">آخر تحديث / Last updated: 2026-07-05</p>
+  <p class="muted">آخر تحديث / Last updated: 2026-08-17</p>
 </header>
 <main>
 
@@ -37,14 +43,66 @@
   (المعرّف: <code>com.prog98.word_connect</code>) المتاح على متجر Google Play.
   نحترم خصوصيتك، وتوضح هذه الصفحة بشفافية ما الذي يُجمع من بيانات ولماذا.</p>
 
-  <h2>١. لا حسابات ولا بيانات شخصية تُدخلها بنفسك</h2>
-  <p>اللعبة لا تتطلب إنشاء حساب أو تسجيل دخول، ولا تطلب منك إدخال اسمك أو
-  بريدك أو أي بيانات شخصية. تقدّمك في اللعبة (المستويات المكتملة والعملات)
-  يُحفظ على جهازك فقط، ويُحذف نهائيًا عند إلغاء تثبيت التطبيق.</p>
+  <div class="callout">
+    <strong>يمكنك لعب اللعبة كاملة دون أي حساب.</strong> الحملة والمستويات
+    والكلمات المكتشفة تعمل بلا اتصال وبلا تسجيل. الحساب مطلوب فقط للميزات
+    الاجتماعية: لوحات المتصدرين، والأصدقاء، والمبارزات.
+  </div>
 
-  <h2>٢. البيانات التي تُجمع تلقائيًا</h2>
-  <p>يستخدم التطبيق خدمات من Google تجمع بيانات محدودة لتشغيل الإعلانات
-  وتحسين اللعبة:</p>
+  <h2>١. الحسابات</h2>
+  <p>عند استخدام أي ميزة اجتماعية لأول مرة، يُنشأ لك <strong>حساب مجهول</strong>
+  تلقائيًا — وهو مجرد معرّف عشوائي على خوادمنا، لا يحمل اسمك ولا بريدك.
+  يمكنك اختياريًا <strong>ربط حساب Google</strong> لحماية تقدّمك، وعندها
+  يصلنا من Google بريدك الإلكتروني واسم حسابك وصورته إن وُجدت.</p>
+  <p>لدخول لوحات المتصدرين أو المبارزات تختار <strong>اسمًا ظاهرًا</strong>.
+  هذا الاسم <strong>يراه لاعبون آخرون</strong> — فلا تستخدم اسمك الكامل أو أي
+  معلومة تعرّف بك إن لم ترغب في ذلك. يُمنح حسابك أيضًا <strong>رمز صداقة</strong>
+  لا يظهر لغيرك إلا إذا شاركته أنت.</p>
+
+  <h2>٢. ما الذي يُحفظ على خوادمنا</h2>
+  <p>نستخدم <a href="https://supabase.com/privacy">Supabase</a> لتخزين
+  البيانات المرتبطة بحسابك:</p>
+  <table>
+    <tr><th>البيانات</th><th>لماذا</th></tr>
+    <tr><td>الاسم الظاهر، رمز الصداقة، تاريخ الإنشاء</td><td>لتعريفك للاعبين الآخرين</td></tr>
+    <tr><td>البريد والاسم والصورة من Google (عند الربط فقط)</td><td>لاستعادة حسابك على جهاز آخر</td></tr>
+    <tr><td>رصيد العملات وسجل حركاتها</td><td>لئلا تفقد عملاتك عند تغيير الجهاز</td></tr>
+    <tr><td>مشترياتك داخل التطبيق (رقم الطلب والمنتج)</td><td>لإيصال ما اشتريته ومنع الشراء المزدوج</td></tr>
+    <tr><td>نتائج المبارزات وتصنيفك وسجل الفوز والخسارة</td><td>لتشغيل المبارزات وترتيب المتصدرين</td></tr>
+    <tr><td>قائمة أصدقائك ودعوات الصداقة ودعوات المبارزة</td><td>لتشغيل الميزات الاجتماعية</td></tr>
+    <tr><td>قائمة من حظرتهم، والبلاغات التي أرسلتها</td><td>لحمايتك ولمراجعة المخالفات</td></tr>
+    <tr><td>إشعاراتك ورمز جهازك للإشعارات</td><td>لإرسال التنبيهات التي فعّلتها</td></tr>
+  </table>
+  <p class="muted">خوادمنا لدى Supabase موجودة في <strong>الهند
+  (ap-south-1)</strong>، أي أن بياناتك تُنقل وتُعالَج خارج بلدك.</p>
+
+  <h2>٣. ما الذي يبقى على جهازك وحده</h2>
+  <p>تقدّم الحملة والمستويات المكتملة والكلمات المكتشفة وإعداداتك تُحفظ
+  <strong>على جهازك فقط</strong>، ولا تصل خوادمنا. تُحذف نهائيًا عند إلغاء
+  تثبيت التطبيق، وتبقى كما هي إذا حذفت حسابك.</p>
+
+  <h2>٤. الحظر والإبلاغ</h2>
+  <p>يمكنك حظر أي لاعب من صفحته. الحظر يمنع التواصل في الاتجاهين، ويُزيل
+  الصداقة، ويلغي أي دعوة مبارزة بينكما — و<strong>لا يُبلَّغ الطرف الآخر
+  بذلك</strong>. يمكنك التراجع من <strong>الحساب ← اللاعبون المحظورون</strong>.</p>
+  <p>يمكنك أيضًا الإبلاغ عن لاعب. يصلنا حينها معرّفك ومعرّفه واسمه الظاهر وسبب
+  البلاغ وأي ملاحظة تكتبها، ويُستخدم ذلك <strong>لمراجعة المخالفات فقط</strong>.
+  البلاغ لا يصل الطرف الآخر، ويبقى محفوظًا لدينا حتى بعد حذف أيٍّ من
+  الحسابين — وإلا لأمكن محو الشكوى بحذف الحساب.</p>
+
+  <h2>٥. حذف حسابك</h2>
+  <p>من داخل التطبيق: <strong>الحساب ← حذف الحساب نهائيًا</strong>. يُحذف
+  حسابك وكل ما سبق في القسم ٢ حذفًا نهائيًا وفوريًا ولا يمكن التراجع عنه،
+  بما في ذلك عملاتك — حتى ما اشتريته منها، ولا تُستردّ قيمته.</p>
+  <p>الاستثناء الوحيد هو البلاغات التي قدّمها لاعبون آخرون عنك: يُمحى ارتباطها
+  بحسابك، ويبقى محتواها كما هو للسبب المذكور في القسم ٤.</p>
+  <p>إن تعذّر عليك الوصول إلى التطبيق، راسلنا من البريد المرتبط بحسابك على
+  <a href="mailto:app.prog98@gmail.com">app.prog98@gmail.com</a> وسنحذف حسابك
+  خلال ٣٠ يومًا. تقدّمك المحفوظ على الجهاز لا يتأثر بأيٍّ من ذلك.</p>
+  <p><strong>التفاصيل الكاملة — الخطوات، وما يُحذف، وما يبقى ولماذا — في
+  <a href="delete-account/">صفحة طلب حذف الحساب</a>.</strong></p>
+
+  <h2>٦. البيانات التي تُجمع تلقائيًا</h2>
   <ul>
     <li><strong>إعلانات Google AdMob:</strong> معرّف الإعلانات على جهازك،
       وعنوان IP (لتقدير الموقع الجغرافي التقريبي)، وبيانات التفاعل مع
@@ -55,28 +113,29 @@
     <li><strong>Firebase Crashlytics:</strong> سجلّات الأعطال وبيانات تشخيصية
       عن الجهاز — لإصلاح الأخطاء بسرعة.</li>
   </ul>
-  <p>جميع هذه البيانات تُنقل مشفّرة، ولا نبيع بياناتك لأي جهة، ولا يمكننا
-  التعرّف على هويتك الشخصية من خلالها.</p>
+  <p>جميع البيانات تُنقل مشفّرة، ولا نبيع بياناتك لأي جهة.</p>
 
-  <h2>٣. الإعلانات والموافقة</h2>
+  <h2>٧. الإعلانات والموافقة</h2>
   <p>تُعرض الإعلانات عبر Google AdMob. في الدول التي تتطلب ذلك (مثل دول
   الاتحاد الأوروبي)، ستظهر لك رسالة موافقة عند أول تشغيل، ويمكنك تغيير
   اختيارك في أي وقت من داخل اللعبة: <strong>الإعدادات ← خيارات الخصوصية
   والإعلانات</strong>. يمكنك أيضًا إعادة تعيين معرّف الإعلانات أو حذفه من
   إعدادات أندرويد ← الخصوصية ← الإعلانات.</p>
 
-  <h2>٤. الأطفال</h2>
+  <h2>٨. الأطفال</h2>
   <p>التطبيق مناسب لعموم الأفراد وليس موجّهًا للأطفال دون ١٣ عامًا، ولا
-  نجمع عن قصد أي بيانات من الأطفال.</p>
+  نجمع عن قصد أي بيانات من الأطفال. إن كنت وليَّ أمر وتعتقد أن طفلك أنشأ
+  حسابًا، راسلنا وسنحذفه.</p>
 
-  <h2>٥. مزيد من المعلومات</h2>
+  <h2>٩. مزيد من المعلومات</h2>
   <ul>
     <li><a href="https://policies.google.com/privacy">سياسة خصوصية Google</a></li>
     <li><a href="https://support.google.com/admob/answer/9012903">شركاء AdMob الإعلانيون</a></li>
     <li><a href="https://policies.google.com/technologies/partner-sites">كيف تستخدم Google البيانات</a></li>
+    <li><a href="https://supabase.com/privacy">سياسة خصوصية Supabase</a></li>
   </ul>
 
-  <h2>٦. التغييرات والتواصل</h2>
+  <h2>١٠. التغييرات والتواصل</h2>
   <p>قد نحدّث هذه السياسة عند الحاجة وسيُذكر تاريخ آخر تحديث أعلى الصفحة.
   للاستفسارات: <a href="mailto:app.prog98@gmail.com">app.prog98@gmail.com</a></p>
 </section>
@@ -88,13 +147,76 @@
   <p>This privacy policy applies to <strong>Wasla: Arabic Word Connect</strong>
   (<code>com.prog98.word_connect</code>) on Google Play.</p>
 
-  <h3>1. No accounts, no personal data you enter</h3>
-  <p>The game requires no account or sign-in and never asks for your name,
-  email, or other personal details. Your progress (completed levels, coins)
-  is stored only on your device and is permanently deleted when you
-  uninstall the app.</p>
+  <div class="callout">
+    <strong>You can play the whole game without an account.</strong> The
+    campaign, levels and discovered words work offline with no sign-in. An
+    account is needed only for the social features: leaderboards, friends and
+    duels.
+  </div>
 
-  <h3>2. Data collected automatically</h3>
+  <h3>1. Accounts</h3>
+  <p>The first time you use a social feature, an <strong>anonymous account</strong>
+  is created for you automatically — a random identifier on our servers,
+  carrying no name and no email. You may optionally <strong>link a Google
+  account</strong> to protect your progress; Google then gives us your email
+  address, account name, and profile picture if you have one.</p>
+  <p>To enter leaderboards or duels you choose a <strong>display name</strong>.
+  That name is <strong>visible to other players</strong>, so don't use your
+  full name or anything identifying unless you want to. Your account also gets
+  a <strong>friend code</strong>, which nobody sees unless you share it.</p>
+
+  <h3>2. What we store on our servers</h3>
+  <p>We use <a href="https://supabase.com/privacy">Supabase</a> to store data
+  tied to your account:</p>
+  <table>
+    <tr><th>Data</th><th>Why</th></tr>
+    <tr><td>Display name, friend code, creation date</td><td>To identify you to other players</td></tr>
+    <tr><td>Email, name and picture from Google (only if you link)</td><td>To restore your account on another device</td></tr>
+    <tr><td>Coin balance and its transaction history</td><td>So you don't lose coins when changing device</td></tr>
+    <tr><td>In-app purchases (order and product id)</td><td>To deliver what you bought and prevent double charges</td></tr>
+    <tr><td>Duel results, rating, win/loss record</td><td>To run duels and rank leaderboards</td></tr>
+    <tr><td>Friends list, friend requests, duel invitations</td><td>To run the social features</td></tr>
+    <tr><td>Who you have blocked, and reports you send</td><td>To protect you and to review misconduct</td></tr>
+    <tr><td>Your notifications and device push token</td><td>To send the alerts you enabled</td></tr>
+  </table>
+  <p class="muted">Our Supabase servers are located in <strong>India
+  (ap-south-1)</strong>, so your data is transferred and processed outside your
+  own country.</p>
+
+  <h3>3. What stays only on your device</h3>
+  <p>Campaign progress, completed levels, discovered words and your settings
+  are stored <strong>on your device only</strong> and never reach our servers.
+  They are permanently deleted when you uninstall the app, and are unaffected
+  if you delete your account.</p>
+
+  <h3>4. Blocking and reporting</h3>
+  <p>You can block any player from their profile. A block stops contact in both
+  directions, removes the friendship, and cancels any duel invitation between
+  you — and <strong>the other person is not told</strong>. You can undo it from
+  <strong>Account → Blocked players</strong>.</p>
+  <p>You can also report a player. We then receive your id, their id, their
+  display name, the reason, and any note you write, used <strong>solely to
+  review misconduct</strong>. The report is not shown to the person reported,
+  and it is retained even if either account is later deleted — otherwise a
+  complaint could be erased by deleting an account.</p>
+
+  <h3>5. Deleting your account</h3>
+  <p>In the app: <strong>Account → Delete account permanently</strong>. Your
+  account and everything in section 2 is deleted immediately and permanently,
+  with no way to undo it — including your coins, even ones you paid for, which
+  are not refunded.</p>
+  <p>The only exception is reports other players filed about you: their link to
+  your account is erased, but their content is kept, for the reason given in
+  section 4.</p>
+  <p>If you cannot reach the app, email us from the address linked to your
+  account at <a href="mailto:app.prog98@gmail.com">app.prog98@gmail.com</a> and
+  we will delete your account within 30 days. Progress stored on your device is
+  unaffected either way.</p>
+  <p><strong>Full details — the steps, what is deleted, and what is retained
+  and why — are on the
+  <a href="delete-account/">account deletion page</a>.</strong></p>
+
+  <h3>6. Data collected automatically</h3>
   <ul>
     <li><strong>Google AdMob</strong> — your device's advertising ID, IP
       address (approximate location), and ad-interaction data, used to serve
@@ -105,27 +227,29 @@
     <li><strong>Firebase Crashlytics</strong> — crash logs and diagnostics,
       used to fix bugs quickly.</li>
   </ul>
-  <p>All data is encrypted in transit. We do not sell your data and cannot
-  personally identify you from it.</p>
+  <p>All data is encrypted in transit. We do not sell your data.</p>
 
-  <h3>3. Ads &amp; consent</h3>
+  <h3>7. Ads &amp; consent</h3>
   <p>Ads are served by Google AdMob. Where required (e.g. the EEA), a consent
   message appears on first launch; you can change your choice anytime in
   <strong>Settings → Privacy &amp; ad options</strong> inside the game, or
   reset/delete your advertising ID in Android Settings → Privacy → Ads.</p>
 
-  <h3>4. Children</h3>
+  <h3>8. Children</h3>
   <p>The app is suitable for a general audience, is not directed at children
-  under 13, and does not knowingly collect data from children.</p>
+  under 13, and does not knowingly collect data from children. If you are a
+  parent and believe your child created an account, contact us and we will
+  delete it.</p>
 
-  <h3>5. Learn more</h3>
+  <h3>9. Learn more</h3>
   <ul>
     <li><a href="https://policies.google.com/privacy">Google Privacy Policy</a></li>
     <li><a href="https://support.google.com/admob/answer/9012903">AdMob ad partners</a></li>
     <li><a href="https://policies.google.com/technologies/partner-sites">How Google uses data</a></li>
+    <li><a href="https://supabase.com/privacy">Supabase Privacy Policy</a></li>
   </ul>
 
-  <h3>6. Changes &amp; contact</h3>
+  <h3>10. Changes &amp; contact</h3>
   <p>We may update this policy; the date above always reflects the latest
   version. Questions:
   <a href="mailto:app.prog98@gmail.com">app.prog98@gmail.com</a></p>
